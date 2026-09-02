@@ -1,0 +1,23 @@
+title: Payflow
+description: Recurring payments on Stellar
+remote_theme: just-the-docs/just-the-docs
+
+# README.md is the GitBook entry point; index.md is the Jekyll one. They are
+# the same content, so only one is published.
+exclude:
+  - README.md
+  - SUMMARY.md
+  - .gitignore
+
+aux_links:
+  "Contracts": https://github.com/titilope12/payflow-contract
+  "Backend": https://github.com/titilope12/payflow-backend
+  "Frontend": https://github.com/titilope12/payflow-frontend
+  "Live demo": https://titilope12.github.io/payflow-frontend/
+
+search_enabled: true
+heading_anchors: true
+color_scheme: dark
+
+plugins:
+  - jekyll-remote-theme

@@ -1,3 +1,8 @@
+---
+title: Contract reference
+nav_order: 7
+---
+
 # Contract reference
 
 Three contracts. Dependencies point one way only: `subscription` calls

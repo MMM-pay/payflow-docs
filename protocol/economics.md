@@ -1,3 +1,8 @@
+---
+title: Economics
+nav_order: 3
+---
+
 # Economics
 
 ## The fee

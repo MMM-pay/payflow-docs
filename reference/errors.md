@@ -1,3 +1,8 @@
+---
+title: Error codes
+nav_order: 8
+---
+
 # Error codes
 
 Contract errors surface as `Error(Contract, #N)`. The number is scoped to the

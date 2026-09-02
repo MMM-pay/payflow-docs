@@ -1,3 +1,8 @@
+---
+title: Trust model
+nav_order: 4
+---
+
 # Trust model
 
 ## What a subscriber must trust

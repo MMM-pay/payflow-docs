@@ -1,3 +1,8 @@
+---
+title: Contributing
+nav_order: 12
+---
+
 # Contributing
 
 Payflow is three repositories. Each has its own `CONTRIBUTING.md` with the full

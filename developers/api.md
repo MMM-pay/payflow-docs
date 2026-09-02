@@ -1,3 +1,8 @@
+---
+title: REST API
+nav_order: 11
+---
+
 # REST API
 
 Served by `payflow-backend`. Read-only and unauthenticated — everything it

@@ -1,3 +1,8 @@
+---
+title: For subscribers
+nav_order: 5
+---
+
 # For subscribers
 
 ## What you are agreeing to

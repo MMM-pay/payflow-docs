@@ -1,3 +1,8 @@
+---
+title: TypeScript SDK
+nav_order: 10
+---
+
 # TypeScript SDK
 
 `src/lib/payflow.ts` in the frontend repo wraps every contract function. It has

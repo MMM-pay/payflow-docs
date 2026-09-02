@@ -1,3 +1,8 @@
+---
+title: For merchants
+nav_order: 6
+---
+
 # For merchants
 
 ## What Payflow gives you

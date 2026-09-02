@@ -1,3 +1,8 @@
+---
+title: Local setup
+nav_order: 9
+---
+
 # Local setup
 
 Three repositories. Start with the contracts — the other two need deployed

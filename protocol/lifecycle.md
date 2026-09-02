@@ -1,3 +1,8 @@
+---
+title: The mandate lifecycle
+nav_order: 2
+---
+
 # The mandate lifecycle
 
 A mandate is the core object in Payflow. Everything else exists to create,
