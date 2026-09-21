@@ -10,10 +10,10 @@ exclude:
   - .gitignore
 
 aux_links:
-  "Contracts": https://github.com/titilope12/payflow-contract
-  "Backend": https://github.com/titilope12/payflow-backend
-  "Frontend": https://github.com/titilope12/payflow-frontend
-  "Live demo": https://titilope12.github.io/payflow-frontend/
+  "Contracts": https://github.com/MMM-pay/payflow-contract
+  "Backend": https://github.com/MMM-pay/payflow-backend
+  "Frontend": https://github.com/MMM-pay/payflow-frontend
+  "Live demo": https://mmm-pay.github.io/payflow-frontend/
 
 search_enabled: true
 heading_anchors: true

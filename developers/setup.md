@@ -20,7 +20,7 @@ contract IDs.
 ## Contracts
 
 ```bash
-git clone https://github.com/titilope12/payflow-contract
+git clone https://github.com/MMM-pay/payflow-contract
 cd payflow-contract
 
 cargo test --all          # 42 tests
@@ -47,7 +47,7 @@ REGISTRY=C... VAULT=C... SUBSCRIPTION=C... ./scripts/demo.sh testnet
 ## Backend
 
 ```bash
-git clone https://github.com/titilope12/payflow-backend
+git clone https://github.com/MMM-pay/payflow-backend
 cd payflow-backend
 
 npm install
@@ -69,7 +69,7 @@ only; it holds no user funds and has no on-chain privilege.
 ## Frontend
 
 ```bash
-git clone https://github.com/titilope12/payflow-frontend
+git clone https://github.com/MMM-pay/payflow-frontend
 cd payflow-frontend
 
 npm install
