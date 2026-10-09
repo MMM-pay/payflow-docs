@@ -15,14 +15,16 @@ Owns the catalogue of merchant plans.
 | Function | Parameters | Returns | Auth | Events |
 |---|---|---|---|---|
 | `initialize` | `admin: Address` | `()` | none (once only) | — |
-| `create_plan` | `merchant: Address`, `token: Address`, `amount: i128`, `period: u64` | `u64` | `merchant` | `PlanCreated` |
+| `create_plan` | `merchant: Address`, `token: Address`, `amount: i128`, `period: u64`, `name: String` | `u64` | `merchant` | `PlanCreated` |
 | `set_plan_active` | `merchant: Address`, `plan_id: u64`, `active: bool` | `()` | `merchant`, must own plan | `PlanStatusChanged` |
 | `get_plan` | `plan_id: u64` | `Plan` | none | — |
 | `merchant_plans` | `merchant: Address` | `Vec<u64>` | none | — |
 | `admin` | — | `Address` | none | — |
 
-`create_plan` rejects `amount <= 0` and any `period` below `MIN_PERIOD`
-(60 seconds).
+`create_plan` rejects `amount <= 0`, any `period` below `MIN_PERIOD`
+(60 seconds), and any `name` longer than `MAX_NAME_LEN` (64 **bytes**, not
+characters — a multi-byte name can exceed the limit well under 64 characters).
+An empty name is valid; clients fall back to displaying the plan id.
 
 Deactivating a plan stops **new** subscriptions. It does not cancel mandates
 already open against it.

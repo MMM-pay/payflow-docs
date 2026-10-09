@@ -19,6 +19,7 @@ contracts.
 | 4 | `NotPlanOwner` | Caller is not the plan's merchant |
 | 5 | `InvalidAmount` | Price is zero or negative |
 | 6 | `InvalidPeriod` | Period below `MIN_PERIOD` (60s) |
+| 7 | `NameTooLong` | Name above `MAX_NAME_LEN` (64 bytes) |
 
 ## vault
 

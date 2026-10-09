@@ -32,9 +32,11 @@ and merchants should handle it the same way.
 This is the weakest part of the current design, and it is stated plainly rather
 than buried.
 
-The **subscription admin** sets the protocol fee. It is capped at 10% by the
-contract, but within that range the admin can change it, and the change applies
-to mandates that are already open. There is no timelock.
+The **subscription admin** sets the protocol fee, capped at 10% by the
+contract. A change applies only to mandates opened after it: every mandate
+stores the `fee_bps` it was created with and settles at that rate for life, so
+an admin cannot reprice a subscriber who has already signed up. That is what
+removes the need for a timelock on the fee.
 
 The **vault admin** can repoint `set_subscription` at a different contract. A
 malicious or compromised vault admin could point it at a contract that drains
