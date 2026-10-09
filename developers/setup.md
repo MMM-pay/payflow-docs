@@ -23,7 +23,7 @@ contract IDs.
 git clone https://github.com/MMM-pay/payflow-contract
 cd payflow-contract
 
-cargo test --all          # 42 tests
+cargo test --all          # 63 tests
 stellar contract build    # -> target/wasm32v1-none/release/*.wasm
 ```
 
@@ -35,13 +35,14 @@ stellar keys generate payflow-deployer --network testnet --fund
 ```
 
 The script deploys in dependency order — registry, then vault, then
-subscription — initializes each, grants the subscription contract debit rights
-on the vault, and prints an env block. Keep that output.
+subscription — passing each its configuration as constructor arguments, grants
+the subscription contract debit rights on the vault, and writes the ids and the
+deployment ledger to `deployments/<network>.env`.
 
 Smoke-test it end to end:
 
 ```bash
-REGISTRY=C... VAULT=C... SUBSCRIPTION=C... ./scripts/demo.sh testnet
+./scripts/demo.sh testnet   # reads deployments/testnet.env
 ```
 
 ## Backend

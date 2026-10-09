@@ -58,9 +58,16 @@ contract at 10%. On a 10 XLM charge you receive 9.9 XLM.
 
 ## Deactivating a plan
 
-Deactivating stops **new** subscriptions. It does **not** cancel existing
-mandates — those keep billing normally. Only the subscriber can end their own
-mandate.
+Deactivating stops **new** subscriptions. It does **not** end existing
+mandates — those keep billing normally.
 
-If you are shutting a product down, deactivate the plan and tell your
-subscribers to cancel. You cannot cancel for them.
+## Ending a subscriber's mandate
+
+In **Subscribers**, choose **End** next to an active or paused mandate, then
+confirm. This calls `end_mandate`: the mandate is cancelled for good and is
+never charged again. Ending cannot take money from the subscriber or refund
+it; it only stops future charges. The subscriber's account page shows that you
+ended it.
+
+If you are shutting a product down, deactivate the plan so nobody new can
+subscribe, then end the open mandates.

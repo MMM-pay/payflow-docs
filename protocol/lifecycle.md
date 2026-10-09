@@ -16,12 +16,12 @@ settle, or terminate one.
                         ▼
     ┌──────────────► Active ──────────────┐
     │                 │  │                │
-    │  set_paused     │  │  charge        │  cancel
-    │  (false)        │  │  (max reached) │
+    │  set_paused     │  │  charge        │  cancel or
+    │  (false)        │  │  (max reached) │  end_mandate
     │                 ▼  ▼                ▼
     └────────────── Paused            Completed / Cancelled
                         │                (terminal)
-                        │ cancel
+                        │ cancel or end_mandate
                         ▼
                     Cancelled
 ```
@@ -30,11 +30,17 @@ settle, or terminate one.
 |---|---|---|---|
 | `Active` | yes, when due | `subscribe`, or resuming from `Paused` | — |
 | `Paused` | no | subscriber calls `set_paused(true)` | yes |
-| `Cancelled` | no | subscriber calls `cancel` | **no** |
+| `Cancelled` | no | subscriber calls `cancel`, or merchant calls `end_mandate` | **no** |
 | `Completed` | no | `charges_made` reaches `max_charges` | **no** |
 
 Both terminal states are permanent. A subscriber who wants to start again opens
 a new mandate.
+
+Either side can end a mandate. The subscriber uses `cancel`; the merchant uses
+`end_mandate`, for example when it stops offering the service. Both lead to the
+same `Cancelled` state, and the events (`Cancelled` or `MandateEnded`) record
+who did it. Neither can be used to take money: ending only stops future
+charges.
 
 ## Fields frozen at subscribe time
 
@@ -44,6 +50,7 @@ When `subscribe` runs, it reads the plan once and copies these into the mandate:
 - `token`
 - `amount`
 - `period`
+- `fee_bps`, the protocol fee at that moment
 
 They are never read from the registry again. This is the guarantee that a
 merchant cannot edit a plan and silently reprice existing subscribers. If a

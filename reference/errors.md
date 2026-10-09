@@ -9,12 +9,18 @@ Contract errors surface as `Error(Contract, #N)`. The number is scoped to the
 contract that raised it, so the same number means different things in different
 contracts.
 
+An error raised in a contract that another contract called reaches the caller
+with the **callee's** number. A `charge` that fails in `vault.debit` reports
+the vault's `#4` (`InsufficientBalance`), even though `#4` in the subscription
+contract means `NotSubscriber`. Read the code in the context of the method and
+the contracts it calls.
+
 ## plan-registry
 
 | # | Name | Meaning |
 |---|---|---|
-| 1 | `AlreadyInitialized` | `initialize` called twice |
-| 2 | `NotInitialized` | Called before `initialize` |
+| 1 | `AlreadyInitialized` | Unused since v0.2.0 (constructors); number kept |
+| 2 | `NotInitialized` | Configuration missing; cannot happen after a constructor deploy |
 | 3 | `PlanNotFound` | No plan with that id |
 | 4 | `NotPlanOwner` | Caller is not the plan's merchant |
 | 5 | `InvalidAmount` | Price is zero or negative |
@@ -25,8 +31,8 @@ contracts.
 
 | # | Name | Meaning |
 |---|---|---|
-| 1 | `AlreadyInitialized` | `initialize` called twice |
-| 2 | `NotInitialized` | Called before `initialize` |
+| 1 | `AlreadyInitialized` | Unused since v0.2.0 (constructors); number kept |
+| 2 | `NotInitialized` | Configuration missing; cannot happen after a constructor deploy |
 | 3 | `InvalidAmount` | Amount is zero or negative |
 | 4 | `InsufficientBalance` | Balance cannot cover the amount |
 | 5 | `SubscriptionNotSet` | `set_subscription` has not been called |
@@ -35,8 +41,8 @@ contracts.
 
 | # | Name | Meaning |
 |---|---|---|
-| 1 | `AlreadyInitialized` | `initialize` called twice |
-| 2 | `NotInitialized` | Called before `initialize` |
+| 1 | `AlreadyInitialized` | Unused since v0.2.0 (constructors); number kept |
+| 2 | `NotInitialized` | Configuration missing; cannot happen after a constructor deploy |
 | 3 | `MandateNotFound` | No mandate with that id |
 | 4 | `NotSubscriber` | Caller does not own the mandate |
 | 5 | `MandateNotActive` | Mandate is paused, cancelled, or completed |
@@ -45,6 +51,7 @@ contracts.
 | 8 | `FeeTooHigh` | `fee_bps` above `MAX_FEE_BPS` (1000) |
 | 9 | `MaxChargesReached` | Mandate hit its charge cap |
 | 10 | `InvalidMaxCharges` | Reserved |
+| 11 | `NotMerchant` | `end_mandate` called by someone other than the mandate's merchant |
 
 ## Common situations
 

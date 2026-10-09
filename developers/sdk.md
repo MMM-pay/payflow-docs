@@ -67,11 +67,12 @@ arg.bool(true)           // bool
 ```ts
 import { readContract, writeContract, arg } from "@/lib/payflow";
 
+// Index getters are paged: start, limit, at most 50 ids per call.
 const plans = await readContract<bigint[]>(
   registryId,
   "merchant_plans",
   address,
-  [arg.address(merchant)],
+  [arg.address(merchant), arg.u32(0), arg.u32(50)],
 );
 
 const hash = await writeContract(
@@ -92,7 +93,11 @@ sentence:
 ```
 #6 on subscribe/charge  ->  "This subscription is not due yet."
 #4 on deposit/withdraw  ->  "Not enough balance in your vault."
+#4 on charge            ->  "The subscriber's vault does not hold enough..."
 ```
+
+The last line is a cross-contract case: `charge` never raises its own `#4`, so
+a `#4` there comes from the vault it calls.
 
 When you add a contract error, add it to the `ERRORS` map too.
 
