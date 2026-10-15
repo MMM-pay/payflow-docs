@@ -68,3 +68,5 @@ Deployed to **Stellar testnet**. Unaudited. Do not use with real funds.
 | Plan registry | `CDQ5EJTVXXX2CBMHWP3BGGUDHSK6D4I25IF5XXH3QGL2TNTBMJUOFKDB` |
 | Vault | `CBNQEWSYYQOKNX5KB62OFT6ID5TCVSWN4PS4AXAJK6IWUEXOLVN6DXII` |
 | Subscription | `CD5YZUJU6WLFIHGAV4J2BV42GCVZE5ZGDUGSW5CBRIA47TQHSZZW3XMM` |
+
+Writing a page here? Follow the [writing style guide](contributing/style.md) so it matches the rest of the site.

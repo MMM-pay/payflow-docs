@@ -24,3 +24,7 @@
 * [TypeScript SDK](developers/sdk.md)
 * [REST API](developers/api.md)
 * [Contributing](developers/contributing.md)
+
+## Contributing
+
+* [Writing style](contributing/style.md)
