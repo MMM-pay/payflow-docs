@@ -73,3 +73,7 @@ five periods still collects only one charge, not five.
 
 **The merchant changed their price.** They cannot change yours. A price change
 means a new plan, and your mandate stays on the terms you agreed to.
+
+---
+
+More on the recurring questions above: [FAQ](faq.md).
