@@ -1,5 +1,8 @@
 .DS_Store
 node_modules/
+temp_auto_push.bat
 _site/
 .jekyll-cache/
 vendor/
+.gitignore
+branch_structure.json
