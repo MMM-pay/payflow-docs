@@ -12,6 +12,7 @@
 
 * [For subscribers](guides/subscribers.md)
 * [For merchants](guides/merchants.md)
+* [FAQ](guides/faq.md)
 
 ## Reference
 

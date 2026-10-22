@@ -71,3 +71,7 @@ ended it.
 
 If you are shutting a product down, deactivate the plan so nobody new can
 subscribe, then end the open mandates.
+
+---
+
+More on the recurring questions above: [FAQ](faq.md).
