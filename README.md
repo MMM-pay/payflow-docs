@@ -6,7 +6,8 @@ permalink: /
 
 # Payflow
 
-Payflow is recurring payments for the Stellar network.
+Payflow is recurring payments for the Stellar network. New to the
+terms? Start with the [glossary](glossary.md).
 
 ## The problem
 

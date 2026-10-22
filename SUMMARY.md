@@ -25,3 +25,12 @@
 * [TypeScript SDK](developers/sdk.md)
 * [REST API](developers/api.md)
 * [Contributing](developers/contributing.md)
+
+## Resources
+
+* [Stellar resources](resources.md)
+
+## Glossary
+
+* [Glossary](glossary.md)
+
