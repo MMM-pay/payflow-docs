@@ -29,3 +29,7 @@
 
 * [Stellar resources](resources.md)
 
+## Glossary
+
+* [Glossary](glossary.md)
+
