@@ -34,3 +34,6 @@
 
 * [Glossary](glossary.md)
 
+## Accessibility
+
+* [Accessibility](accessibility.md)

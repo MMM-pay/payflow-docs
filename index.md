@@ -69,3 +69,5 @@ Deployed to **Stellar testnet**. Unaudited. Do not use with real funds.
 | Plan registry | `CDQ5EJTVXXX2CBMHWP3BGGUDHSK6D4I25IF5XXH3QGL2TNTBMJUOFKDB` |
 | Vault | `CBNQEWSYYQOKNX5KB62OFT6ID5TCVSWN4PS4AXAJK6IWUEXOLVN6DXII` |
 | Subscription | `CD5YZUJU6WLFIHGAV4J2BV42GCVZE5ZGDUGSW5CBRIA47TQHSZZW3XMM` |
+
+See the [accessibility statement](accessibility.md) for WCAG 2.2 AA conformance details and how to report accessibility issues.
