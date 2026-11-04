@@ -21,3 +21,5 @@ color_scheme: dark
 
 plugins:
   - jekyll-remote-theme
+
+footer_content: "Payflow documentation · <a href=\"https://mmm-pay.github.io/payflow-docs/accessibility.html\">Accessibility statement</a>"
