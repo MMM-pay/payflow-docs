@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # The site is built with GitHub Pages' Ruby gems; keep them current so
+  # security fixes land without waiting for a human.
+  - package-ecosystem: bundler
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+  # The workflows pin actions; keep those current too.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
